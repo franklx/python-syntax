@@ -358,7 +358,7 @@ if version >= 508 || !exists("did_python_syn_inits")
 
   if exists("python_self_cls_highlight")
     syn keyword pythonSelf self cls
-    HiLink pythonSelf Identifier
+    HiLink pythonSelf pythonSelf
   endif
   if !exists("python_no_operator_highlight")
     HiLink pythonExtraOperator       Operator
@@ -366,8 +366,8 @@ if version >= 508 || !exists("did_python_syn_inits")
   endif
   if !exists("python_no_parameter_highlight")
     HiLink pythonBrackets           Normal
-    HiLink pythonClassParameters    Constant
-    HiLink pythonFunctionParameters Constant
+    HiLink pythonClassParameters    pythonParam
+    HiLink pythonFunctionParameters pythonParam
   endif
 
   delcommand HiLink
